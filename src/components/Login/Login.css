@@ -1,0 +1,36 @@
+.user-login-name {
+    height: 40px;
+    width: 250px;
+}
+.login-component {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.login-button {
+    padding: 10px;
+}
+
+.login {
+    width: 125px;
+    height: 25px;
+}
+
+.login-container {
+    color: white;
+    height: 300px;
+    border: 1px solid white;
+    width: 400px;
+    background-color: rgba(37, 34, 34, 0.75);
+    line-height: 300px;
+    text-align: center;
+}
+.login-ui {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.error-message {
+    color: red;
+}

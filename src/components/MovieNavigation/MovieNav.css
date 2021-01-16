@@ -1,0 +1,25 @@
+ul {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    list-style-type: none;
+}
+li {
+    border: 1px solid grey;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+a {
+    color: white;
+    font-size: larger;
+}
+
+.selected {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.navigation {
+    justify-content: center;
+}

@@ -1,0 +1,54 @@
+.imgHeight {
+    height: 450px;
+    width: 300px;
+}
+
+.cardStyle {
+    width: 300px;
+    margin: 20px;
+    color: #333;
+    background-color: transparent;
+    border-radius: 12px;
+}
+
+.movie-detail {
+    background-color: #000;
+    min-height: 125px;
+    color: #dee2e6;
+    position: relative;
+}
+
+.titleDetail {
+    width: 100%;
+}
+.title-style {
+    float: left;
+    width: 85%;
+    margin: 10px 0;
+}
+.rating {
+    display: inline-block;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+.rating-style {
+    padding: 10px;
+    border: 2px solid #343a40;
+    width: 7%;
+    border-radius: 50%;
+    background-color: #212529;
+    color: #ffc107;
+    text-align: center;
+    float: right;
+}
+
+.remove-watchlist {
+    height: 34px;
+    margin: 10px;
+    margin-left: 100px;
+    font-size: medium;
+}
