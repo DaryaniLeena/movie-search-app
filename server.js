@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const session = require("./session");
 const watchlist = require("./watchlist");
+const cors = require("cors");
 
 app.use(cookieParser());
 app.use(express.json());
@@ -129,5 +130,23 @@ app.delete("/session", (req, res) => {
         message: "Logout success!",
     });
 });
+const whitelist = [
+    "http://localhost:3000",
+    "http://localhost:8080",
+    "https://shrouded-journey-38552.herokuapp.com",
+];
+const corsOptions = {
+    origin: function (origin, callback) {
+        console.log("** Origin of request " + origin);
+        if (whitelist.indexOf(origin) !== -1 || !origin) {
+            console.log("Origin acceptable");
+            callback(null, true);
+        } else {
+            console.log("Origin rejected");
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+};
+app.use(cors(corsOptions));
 
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
