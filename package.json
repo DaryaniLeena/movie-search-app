@@ -22,8 +22,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "dev": "npx nodemon server.js",
-        "serve": "node server.js",
-        "heroku-postbuild": "node server.js"
+        "serve": "node server.js"
     },
     "eslintConfig": {
         "extends": [
