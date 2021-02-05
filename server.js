@@ -131,7 +131,7 @@ app.delete("/session", (req, res) => {
     });
 });
 var corsOptions = {
-    origin: "http://localhost:8080",
+    origin: "https://movie-browsing-app.herokuapp.com",
     optionsSuccessStatus: 200, // For legacy browser support
     methods: "GET, PUT,POST,DELETE",
 };
