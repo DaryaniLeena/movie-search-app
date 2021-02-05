@@ -34,7 +34,7 @@ app.get("/session", (req, res) => {
     res.status(200).json(session.users[sid].sender);
 });
 
-app.post("/session", (req, res) => {
+app.post("https://movie-browsing-app.herokuapp.com/session", (req, res) => {
     const username = req.body.username;
     const validUser = session.checkUserName(username);
     if (!validUser) {
