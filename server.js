@@ -43,6 +43,11 @@ app.get("/session", (req, res) => {
 });
 
 app.post("/session", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
     const username = req.body.username;
     const validUser = session.checkUserName(username);
     if (!validUser) {
