@@ -2,10 +2,9 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 
 const app = express();
-const PORT = process.env.PORT || 5000 || 3000;
+const PORT = 5000;
 const session = require("./session");
 const watchlist = require("./watchlist");
-const cors = require("cors");
 
 app.use(cookieParser());
 app.use(express.json());
@@ -130,11 +129,5 @@ app.delete("/session", (req, res) => {
         message: "Logout success!",
     });
 });
-const corsOptions = {
-    origin: "https://movie-browsing-app.herokuapp.com",
-    optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
-app.options("*", cors());
 
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
