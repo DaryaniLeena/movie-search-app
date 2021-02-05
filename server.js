@@ -5,6 +5,7 @@ const app = express();
 const PORT = 5000;
 const session = require("./session");
 const watchlist = require("./watchlist");
+const cors = require("cors");
 
 app.use(cookieParser());
 app.use(express.json());
@@ -129,5 +130,10 @@ app.delete("/session", (req, res) => {
         message: "Logout success!",
     });
 });
-
+var corsOptions = {
+    origin: "http://localhost:8080",
+    optionsSuccessStatus: 200, // For legacy browser support
+    methods: "GET, PUT,POST,DELETE",
+};
+app.use(cors(corsOptions));
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
