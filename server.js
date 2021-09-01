@@ -143,10 +143,4 @@ app.delete("/session", (req, res) => {
         message: "Logout success!",
     });
 });
-var corsOptions = {
-    origin: "https://movie-browsing-app.herokuapp.com",
-    optionsSuccessStatus: 200, // For legacy browser support
-    methods: "GET, PUT, POST, DELETE",
-};
-app.use(cors(corsOptions));
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
